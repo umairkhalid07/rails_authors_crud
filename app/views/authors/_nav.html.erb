@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "Home", root_path, :class => "link" %></a>
+          <span>  |  </span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "List of Authors", authors_path, :class => "link" %></a>
+          <span>  |  </span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "New Author", new_author_path, :class => "link" %></a>
+          <span>  |  </span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "New Book", new_book_path, :class => "link" %></a>
+          <span>  |  </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

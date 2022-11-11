@@ -1,0 +1,19 @@
+<%# debugger %>
+<p class="text-dark">
+  <strong>Book Name: </strong>
+  <%= book.name %>
+</p>
+
+<p class="text-dark">
+  <strong>Book Description: </strong>
+  <%= book.description %>
+</p>
+
+<ul>
+  <li><%= link_to "Edit Details", edit_book_path(book) %></li>
+  <li><%= link_to "Delete Book", :controller=>"books", :action=>"destroy", :method=>'delete' %></li>
+</ul>
+
+<!--<p>-->
+  <%#= link_to "Delete Book", [book.author, book], data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+<!--</p>-->

@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
+
+<%= render 'authors/nav' %>
+
+<div class="m-3">
+  <h1> <%= @author.name %></h1>
+  <h4 class="text-danger"> <%= @author.description %></h4>
+
+  <ul>
+    <li><%= link_to "Edit Details", edit_author_path(@author) %></li>
+    <li><%= link_to "Delete Author", author_path(@author), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></li>
+  </ul>
+
+  <h2>Books</h2>
+  <%= render @author.books %>
+</div>
+

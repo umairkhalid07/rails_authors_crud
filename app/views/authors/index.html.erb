@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
+
+<%= render 'authors/nav' %>
+
+<h1 class="text-center fw-bold display-1 mt-2">List of Authors</h1>
+
+<ul>
+  <% @authors.each do |author| %>
+    <li>
+      <h2 class=""> <%= link_to author.name, author %> </h2>
+      <h4 class=""> <%= author.description %> </h4>
+    </li>
+  <% end %>
+</ul>
